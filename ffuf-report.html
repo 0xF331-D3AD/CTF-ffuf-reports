@@ -1,0 +1,1123 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <title>FFUF Report - </title>
+
+    
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+	/>
+	<link 
+	  rel="stylesheet" 
+	  type="text/css" 
+	  href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css"
+	/>
+  
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">FFUF</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        </ul>
+      </div>
+    </nav>
+
+    <main class="section no-pad-bot" id="index-banner">
+      <div class="container">
+        <br /><br />
+        <h1 class="header center ">FFUF Report</h1>
+        <div class="row center">
+
+		<pre>./ffuf -u http://HOST:PORT/PATH -ic -of html -o ~/CTF/AdventOfCyber2/day24/ffuf-report.html -t 55 -w ~/CTF/AdventOfCyber2/day24/ports.txt:PORT -w ~/CTF/AdventOfCyber2/day24/hosts.txt:HOST -w ~/CyberSecurity/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt:PATH</pre>
+		<pre>2022-07-19T21:34:11&#43;03:00</pre>
+
+   <table id="ffufreport">
+        <thead>
+        <div style="display:none">
+|result_raw|StatusCode|Input|Position|ContentLength|ContentWords|ContentLines|
+        </div>
+          <tr>
+              <th>Status</th>
+              <th>PORT</th>
+              <th>HOST</th>
+              <th>PATH</th>
+
+			  <th>URL</th>
+			  <th>Redirect location</th>
+              <th>Position</th>
+              <th>Length</th>
+              <th>Words</th>
+			  <th>Lines</th>
+			  <th>Type</th>
+        <th>Duration</th>
+			  <th>Resultfile</th>
+          </tr>
+        </thead>
+
+        <tbody>
+			
+                <div style="display:none">
+|result_raw|200|smtp||65000|http://smtp:65000/||6|800|31|27|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>smtp</td>
+                    
+                        <td></td>
+                    
+                        <td>65000</td>
+                    
+                    <td><a href="http://smtp:65000/">http://smtp:65000/</a></td>
+                    <td><a href=""></a></td>
+                    <td>6</td>
+                    <td>800</td>
+                    <td>31</td>
+					<td>27</td>
+					<td>text/html; charset=UTF-8</td>
+          <td>99.247796ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|server||65000|http://server:65000/||4|800|31|27|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>server</td>
+                    
+                        <td></td>
+                    
+                        <td>65000</td>
+                    
+                    <td><a href="http://server:65000/">http://server:65000/</a></td>
+                    <td><a href=""></a></td>
+                    <td>4</td>
+                    <td>800</td>
+                    <td>31</td>
+					<td>27</td>
+					<td>text/html; charset=UTF-8</td>
+          <td>99.307463ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|apps||65000|http://apps:65000/||8|800|31|27|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>apps</td>
+                    
+                        <td></td>
+                    
+                        <td>65000</td>
+                    
+                    <td><a href="http://apps:65000/">http://apps:65000/</a></td>
+                    <td><a href=""></a></td>
+                    <td>8</td>
+                    <td>800</td>
+                    <td>31</td>
+					<td>27</td>
+					<td>text/html; charset=UTF-8</td>
+          <td>2.185713026s</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|ssl||65000|http://ssl:65000/||2|800|31|27|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>ssl</td>
+                    
+                        <td></td>
+                    
+                        <td>65000</td>
+                    
+                    <td><a href="http://ssl:65000/">http://ssl:65000/</a></td>
+                    <td><a href=""></a></td>
+                    <td>2</td>
+                    <td>800</td>
+                    <td>31</td>
+					<td>27</td>
+					<td>text/html; charset=UTF-8</td>
+          <td>3.293760061s</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|301|ssl|3|80|http://ssl:80/3|http://ssl/3/|449|290|20|10|text/html; charset=iso-8859-1|
+                </div>
+                <tr class="result-301" style="background-color: #bbbbe6;">
+                    <td><font color="black" class="status-code">301</font></td>
+                    
+                        <td>ssl</td>
+                    
+                        <td>3</td>
+                    
+                        <td>80</td>
+                    
+                    <td><a href="http://ssl:80/3">http://ssl:80/3</a></td>
+                    <td><a href="http://ssl/3/">http://ssl/3/</a></td>
+                    <td>449</td>
+                    <td>290</td>
+                    <td>20</td>
+					<td>10</td>
+					<td>text/html; charset=iso-8859-1</td>
+          <td>96.799848ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|301|server|3|80|http://server:80/3|http://server/3/|451|296|20|10|text/html; charset=iso-8859-1|
+                </div>
+                <tr class="result-301" style="background-color: #bbbbe6;">
+                    <td><font color="black" class="status-code">301</font></td>
+                    
+                        <td>server</td>
+                    
+                        <td>3</td>
+                    
+                        <td>80</td>
+                    
+                    <td><a href="http://server:80/3">http://server:80/3</a></td>
+                    <td><a href="http://server/3/">http://server/3/</a></td>
+                    <td>451</td>
+                    <td>296</td>
+                    <td>20</td>
+					<td>10</td>
+					<td>text/html; charset=iso-8859-1</td>
+          <td>97.631142ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|301|smtp|3|80|http://smtp:80/3|http://smtp/3/|453|292|20|10|text/html; charset=iso-8859-1|
+                </div>
+                <tr class="result-301" style="background-color: #bbbbe6;">
+                    <td><font color="black" class="status-code">301</font></td>
+                    
+                        <td>smtp</td>
+                    
+                        <td>3</td>
+                    
+                        <td>80</td>
+                    
+                    <td><a href="http://smtp:80/3">http://smtp:80/3</a></td>
+                    <td><a href="http://smtp/3/">http://smtp/3/</a></td>
+                    <td>453</td>
+                    <td>292</td>
+                    <td>20</td>
+					<td>10</td>
+					<td>text/html; charset=iso-8859-1</td>
+          <td>97.801569ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|301|apps|3|80|http://apps:80/3|http://apps/3/|455|292|20|10|text/html; charset=iso-8859-1|
+                </div>
+                <tr class="result-301" style="background-color: #bbbbe6;">
+                    <td><font color="black" class="status-code">301</font></td>
+                    
+                        <td>apps</td>
+                    
+                        <td>3</td>
+                    
+                        <td>80</td>
+                    
+                    <td><a href="http://apps:80/3">http://apps:80/3</a></td>
+                    <td><a href="http://apps/3/">http://apps/3/</a></td>
+                    <td>455</td>
+                    <td>292</td>
+                    <td>20</td>
+					<td>10</td>
+					<td>text/html; charset=iso-8859-1</td>
+          <td>98.145961ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|301|server|assets|65000|http://server:65000/assets|http://server:65000/assets/|2220|310|20|10|text/html; charset=iso-8859-1|
+                </div>
+                <tr class="result-301" style="background-color: #bbbbe6;">
+                    <td><font color="black" class="status-code">301</font></td>
+                    
+                        <td>server</td>
+                    
+                        <td>assets</td>
+                    
+                        <td>65000</td>
+                    
+                    <td><a href="http://server:65000/assets">http://server:65000/assets</a></td>
+                    <td><a href="http://server:65000/assets/">http://server:65000/assets/</a></td>
+                    <td>2220</td>
+                    <td>310</td>
+                    <td>20</td>
+					<td>10</td>
+					<td>text/html; charset=iso-8859-1</td>
+          <td>63.035557ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|301|ssl|assets|65000|http://ssl:65000/assets|http://ssl:65000/assets/|2218|304|20|10|text/html; charset=iso-8859-1|
+                </div>
+                <tr class="result-301" style="background-color: #bbbbe6;">
+                    <td><font color="black" class="status-code">301</font></td>
+                    
+                        <td>ssl</td>
+                    
+                        <td>assets</td>
+                    
+                        <td>65000</td>
+                    
+                    <td><a href="http://ssl:65000/assets">http://ssl:65000/assets</a></td>
+                    <td><a href="http://ssl:65000/assets/">http://ssl:65000/assets/</a></td>
+                    <td>2218</td>
+                    <td>304</td>
+                    <td>20</td>
+					<td>10</td>
+					<td>text/html; charset=iso-8859-1</td>
+          <td>63.244382ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|301|apps|assets|65000|http://apps:65000/assets|http://apps:65000/assets/|2224|306|20|10|text/html; charset=iso-8859-1|
+                </div>
+                <tr class="result-301" style="background-color: #bbbbe6;">
+                    <td><font color="black" class="status-code">301</font></td>
+                    
+                        <td>apps</td>
+                    
+                        <td>assets</td>
+                    
+                        <td>65000</td>
+                    
+                    <td><a href="http://apps:65000/assets">http://apps:65000/assets</a></td>
+                    <td><a href="http://apps:65000/assets/">http://apps:65000/assets/</a></td>
+                    <td>2224</td>
+                    <td>306</td>
+                    <td>20</td>
+					<td>10</td>
+					<td>text/html; charset=iso-8859-1</td>
+          <td>347.151219ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|301|smtp|assets|65000|http://smtp:65000/assets|http://smtp:65000/assets/|2222|306|20|10|text/html; charset=iso-8859-1|
+                </div>
+                <tr class="result-301" style="background-color: #bbbbe6;">
+                    <td><font color="black" class="status-code">301</font></td>
+                    
+                        <td>smtp</td>
+                    
+                        <td>assets</td>
+                    
+                        <td>65000</td>
+                    
+                    <td><a href="http://smtp:65000/assets">http://smtp:65000/assets</a></td>
+                    <td><a href="http://smtp:65000/assets/">http://smtp:65000/assets/</a></td>
+                    <td>2222</td>
+                    <td>306</td>
+                    <td>20</td>
+					<td>10</td>
+					<td>text/html; charset=iso-8859-1</td>
+          <td>347.350948ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|server||80|http://server:80/||3|0|1|1|text/html|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>server</td>
+                    
+                        <td></td>
+                    
+                        <td>80</td>
+                    
+                    <td><a href="http://server:80/">http://server:80/</a></td>
+                    <td><a href=""></a></td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>1</td>
+					<td>1</td>
+					<td>text/html</td>
+          <td>5.293898212s</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|ssl||80|http://ssl:80/||1|0|1|1|text/html|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>ssl</td>
+                    
+                        <td></td>
+                    
+                        <td>80</td>
+                    
+                    <td><a href="http://ssl:80/">http://ssl:80/</a></td>
+                    <td><a href=""></a></td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+					<td>1</td>
+					<td>text/html</td>
+          <td>5.290592418s</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|smtp||80|http://smtp:80/||5|0|1|1|text/html|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>smtp</td>
+                    
+                        <td></td>
+                    
+                        <td>80</td>
+                    
+                    <td><a href="http://smtp:80/">http://smtp:80/</a></td>
+                    <td><a href=""></a></td>
+                    <td>5</td>
+                    <td>0</td>
+                    <td>1</td>
+					<td>1</td>
+					<td>text/html</td>
+          <td>4.237272065s</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|apps||80|http://apps:80/||7|0|1|1|text/html|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>apps</td>
+                    
+                        <td></td>
+                    
+                        <td>80</td>
+                    
+                    <td><a href="http://apps:80/">http://apps:80/</a></td>
+                    <td><a href=""></a></td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>1</td>
+					<td>1</td>
+					<td>text/html</td>
+          <td>4.234597706s</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|301|smtp|api|65000|http://smtp:65000/api|http://smtp:65000/api/|8102|303|20|10|text/html; charset=iso-8859-1|
+                </div>
+                <tr class="result-301" style="background-color: #bbbbe6;">
+                    <td><font color="black" class="status-code">301</font></td>
+                    
+                        <td>smtp</td>
+                    
+                        <td>api</td>
+                    
+                        <td>65000</td>
+                    
+                    <td><a href="http://smtp:65000/api">http://smtp:65000/api</a></td>
+                    <td><a href="http://smtp:65000/api/">http://smtp:65000/api/</a></td>
+                    <td>8102</td>
+                    <td>303</td>
+                    <td>20</td>
+					<td>10</td>
+					<td>text/html; charset=iso-8859-1</td>
+          <td>55.183323ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|301|ssl|api|65000|http://ssl:65000/api|http://ssl:65000/api/|8098|301|20|10|text/html; charset=iso-8859-1|
+                </div>
+                <tr class="result-301" style="background-color: #bbbbe6;">
+                    <td><font color="black" class="status-code">301</font></td>
+                    
+                        <td>ssl</td>
+                    
+                        <td>api</td>
+                    
+                        <td>65000</td>
+                    
+                    <td><a href="http://ssl:65000/api">http://ssl:65000/api</a></td>
+                    <td><a href="http://ssl:65000/api/">http://ssl:65000/api/</a></td>
+                    <td>8098</td>
+                    <td>301</td>
+                    <td>20</td>
+					<td>10</td>
+					<td>text/html; charset=iso-8859-1</td>
+          <td>55.504274ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|301|apps|api|65000|http://apps:65000/api|http://apps:65000/api/|8104|303|20|10|text/html; charset=iso-8859-1|
+                </div>
+                <tr class="result-301" style="background-color: #bbbbe6;">
+                    <td><font color="black" class="status-code">301</font></td>
+                    
+                        <td>apps</td>
+                    
+                        <td>api</td>
+                    
+                        <td>65000</td>
+                    
+                    <td><a href="http://apps:65000/api">http://apps:65000/api</a></td>
+                    <td><a href="http://apps:65000/api/">http://apps:65000/api/</a></td>
+                    <td>8104</td>
+                    <td>303</td>
+                    <td>20</td>
+					<td>10</td>
+					<td>text/html; charset=iso-8859-1</td>
+          <td>55.135242ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|301|server|api|65000|http://server:65000/api|http://server:65000/api/|8100|307|20|10|text/html; charset=iso-8859-1|
+                </div>
+                <tr class="result-301" style="background-color: #bbbbe6;">
+                    <td><font color="black" class="status-code">301</font></td>
+                    
+                        <td>server</td>
+                    
+                        <td>api</td>
+                    
+                        <td>65000</td>
+                    
+                    <td><a href="http://server:65000/api">http://server:65000/api</a></td>
+                    <td><a href="http://server:65000/api/">http://server:65000/api/</a></td>
+                    <td>8100</td>
+                    <td>307</td>
+                    <td>20</td>
+					<td>10</td>
+					<td>text/html; charset=iso-8859-1</td>
+          <td>55.454001ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|301|ssl|grid|65000|http://ssl:65000/grid|http://ssl:65000/grid/|20290|302|20|10|text/html; charset=iso-8859-1|
+                </div>
+                <tr class="result-301" style="background-color: #bbbbe6;">
+                    <td><font color="black" class="status-code">301</font></td>
+                    
+                        <td>ssl</td>
+                    
+                        <td>grid</td>
+                    
+                        <td>65000</td>
+                    
+                    <td><a href="http://ssl:65000/grid">http://ssl:65000/grid</a></td>
+                    <td><a href="http://ssl:65000/grid/">http://ssl:65000/grid/</a></td>
+                    <td>20290</td>
+                    <td>302</td>
+                    <td>20</td>
+					<td>10</td>
+					<td>text/html; charset=iso-8859-1</td>
+          <td>52.193133ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|301|server|grid|65000|http://server:65000/grid|http://server:65000/grid/|20292|308|20|10|text/html; charset=iso-8859-1|
+                </div>
+                <tr class="result-301" style="background-color: #bbbbe6;">
+                    <td><font color="black" class="status-code">301</font></td>
+                    
+                        <td>server</td>
+                    
+                        <td>grid</td>
+                    
+                        <td>65000</td>
+                    
+                    <td><a href="http://server:65000/grid">http://server:65000/grid</a></td>
+                    <td><a href="http://server:65000/grid/">http://server:65000/grid/</a></td>
+                    <td>20292</td>
+                    <td>308</td>
+                    <td>20</td>
+					<td>10</td>
+					<td>text/html; charset=iso-8859-1</td>
+          <td>52.42859ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|301|apps|grid|65000|http://apps:65000/grid|http://apps:65000/grid/|20296|304|20|10|text/html; charset=iso-8859-1|
+                </div>
+                <tr class="result-301" style="background-color: #bbbbe6;">
+                    <td><font color="black" class="status-code">301</font></td>
+                    
+                        <td>apps</td>
+                    
+                        <td>grid</td>
+                    
+                        <td>65000</td>
+                    
+                    <td><a href="http://apps:65000/grid">http://apps:65000/grid</a></td>
+                    <td><a href="http://apps:65000/grid/">http://apps:65000/grid/</a></td>
+                    <td>20296</td>
+                    <td>304</td>
+                    <td>20</td>
+					<td>10</td>
+					<td>text/html; charset=iso-8859-1</td>
+          <td>63.220173ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|301|smtp|grid|65000|http://smtp:65000/grid|http://smtp:65000/grid/|20294|304|20|10|text/html; charset=iso-8859-1|
+                </div>
+                <tr class="result-301" style="background-color: #bbbbe6;">
+                    <td><font color="black" class="status-code">301</font></td>
+                    
+                        <td>smtp</td>
+                    
+                        <td>grid</td>
+                    
+                        <td>65000</td>
+                    
+                    <td><a href="http://smtp:65000/grid">http://smtp:65000/grid</a></td>
+                    <td><a href="http://smtp:65000/grid/">http://smtp:65000/grid/</a></td>
+                    <td>20294</td>
+                    <td>304</td>
+                    <td>20</td>
+					<td>10</td>
+					<td>text/html; charset=iso-8859-1</td>
+          <td>63.19162ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|301|ssl|codes|80|http://ssl:80/codes|http://ssl/codes/|20625|294|20|10|text/html; charset=iso-8859-1|
+                </div>
+                <tr class="result-301" style="background-color: #bbbbe6;">
+                    <td><font color="black" class="status-code">301</font></td>
+                    
+                        <td>ssl</td>
+                    
+                        <td>codes</td>
+                    
+                        <td>80</td>
+                    
+                    <td><a href="http://ssl:80/codes">http://ssl:80/codes</a></td>
+                    <td><a href="http://ssl/codes/">http://ssl/codes/</a></td>
+                    <td>20625</td>
+                    <td>294</td>
+                    <td>20</td>
+					<td>10</td>
+					<td>text/html; charset=iso-8859-1</td>
+          <td>52.438925ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|301|server|codes|80|http://server:80/codes|http://server/codes/|20627|300|20|10|text/html; charset=iso-8859-1|
+                </div>
+                <tr class="result-301" style="background-color: #bbbbe6;">
+                    <td><font color="black" class="status-code">301</font></td>
+                    
+                        <td>server</td>
+                    
+                        <td>codes</td>
+                    
+                        <td>80</td>
+                    
+                    <td><a href="http://server:80/codes">http://server:80/codes</a></td>
+                    <td><a href="http://server/codes/">http://server/codes/</a></td>
+                    <td>20627</td>
+                    <td>300</td>
+                    <td>20</td>
+					<td>10</td>
+					<td>text/html; charset=iso-8859-1</td>
+          <td>52.789497ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|301|smtp|codes|80|http://smtp:80/codes|http://smtp/codes/|20629|296|20|10|text/html; charset=iso-8859-1|
+                </div>
+                <tr class="result-301" style="background-color: #bbbbe6;">
+                    <td><font color="black" class="status-code">301</font></td>
+                    
+                        <td>smtp</td>
+                    
+                        <td>codes</td>
+                    
+                        <td>80</td>
+                    
+                    <td><a href="http://smtp:80/codes">http://smtp:80/codes</a></td>
+                    <td><a href="http://smtp/codes/">http://smtp/codes/</a></td>
+                    <td>20629</td>
+                    <td>296</td>
+                    <td>20</td>
+					<td>10</td>
+					<td>text/html; charset=iso-8859-1</td>
+          <td>52.790273ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|301|apps|codes|80|http://apps:80/codes|http://apps/codes/|20631|296|20|10|text/html; charset=iso-8859-1|
+                </div>
+                <tr class="result-301" style="background-color: #bbbbe6;">
+                    <td><font color="black" class="status-code">301</font></td>
+                    
+                        <td>apps</td>
+                    
+                        <td>codes</td>
+                    
+                        <td>80</td>
+                    
+                    <td><a href="http://apps:80/codes">http://apps:80/codes</a></td>
+                    <td><a href="http://apps/codes/">http://apps/codes/</a></td>
+                    <td>20631</td>
+                    <td>296</td>
+                    <td>20</td>
+					<td>10</td>
+					<td>text/html; charset=iso-8859-1</td>
+          <td>56.84777ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|smtp||65000|http://smtp:65000/||361814|800|31|27|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>smtp</td>
+                    
+                        <td></td>
+                    
+                        <td>65000</td>
+                    
+                    <td><a href="http://smtp:65000/">http://smtp:65000/</a></td>
+                    <td><a href=""></a></td>
+                    <td>361814</td>
+                    <td>800</td>
+                    <td>31</td>
+					<td>27</td>
+					<td>text/html; charset=UTF-8</td>
+          <td>59.033965ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|apps||65000|http://apps:65000/||361816|800|31|27|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>apps</td>
+                    
+                        <td></td>
+                    
+                        <td>65000</td>
+                    
+                    <td><a href="http://apps:65000/">http://apps:65000/</a></td>
+                    <td><a href=""></a></td>
+                    <td>361816</td>
+                    <td>800</td>
+                    <td>31</td>
+					<td>27</td>
+					<td>text/html; charset=UTF-8</td>
+          <td>57.746166ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|server||65000|http://server:65000/||361812|800|31|27|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>server</td>
+                    
+                        <td></td>
+                    
+                        <td>65000</td>
+                    
+                    <td><a href="http://server:65000/">http://server:65000/</a></td>
+                    <td><a href=""></a></td>
+                    <td>361812</td>
+                    <td>800</td>
+                    <td>31</td>
+					<td>27</td>
+					<td>text/html; charset=UTF-8</td>
+          <td>61.676594ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|ssl||65000|http://ssl:65000/||361810|800|31|27|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>ssl</td>
+                    
+                        <td></td>
+                    
+                        <td>65000</td>
+                    
+                    <td><a href="http://ssl:65000/">http://ssl:65000/</a></td>
+                    <td><a href=""></a></td>
+                    <td>361810</td>
+                    <td>800</td>
+                    <td>31</td>
+					<td>27</td>
+					<td>text/html; charset=UTF-8</td>
+          <td>75.568167ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|apps||80|http://apps:80/||361815|8848026|17748|6795|text/html|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>apps</td>
+                    
+                        <td></td>
+                    
+                        <td>80</td>
+                    
+                    <td><a href="http://apps:80/">http://apps:80/</a></td>
+                    <td><a href=""></a></td>
+                    <td>361815</td>
+                    <td>8848026</td>
+                    <td>17748</td>
+					<td>6795</td>
+					<td>text/html</td>
+          <td>97.259123ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|ssl||80|http://ssl:80/||361809|8848026|17748|6795|text/html|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>ssl</td>
+                    
+                        <td></td>
+                    
+                        <td>80</td>
+                    
+                    <td><a href="http://ssl:80/">http://ssl:80/</a></td>
+                    <td><a href=""></a></td>
+                    <td>361809</td>
+                    <td>8848026</td>
+                    <td>17748</td>
+					<td>6795</td>
+					<td>text/html</td>
+          <td>102.429209ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|smtp||80|http://smtp:80/||361813|8848026|17748|6795|text/html|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>smtp</td>
+                    
+                        <td></td>
+                    
+                        <td>80</td>
+                    
+                    <td><a href="http://smtp:80/">http://smtp:80/</a></td>
+                    <td><a href=""></a></td>
+                    <td>361813</td>
+                    <td>8848026</td>
+                    <td>17748</td>
+					<td>6795</td>
+					<td>text/html</td>
+          <td>92.272968ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|server||80|http://server:80/||361811|8848026|17748|6795|text/html|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>server</td>
+                    
+                        <td></td>
+                    
+                        <td>80</td>
+                    
+                    <td><a href="http://server:80/">http://server:80/</a></td>
+                    <td><a href=""></a></td>
+                    <td>361811</td>
+                    <td>8848026</td>
+                    <td>17748</td>
+					<td>6795</td>
+					<td>text/html</td>
+          <td>95.293024ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|403|smtp|server-status|65000|http://smtp:65000/server-status||764086|272|20|10|text/html; charset=iso-8859-1|
+                </div>
+                <tr class="result-403" style="background-color: #d2cb7e;">
+                    <td><font color="black" class="status-code">403</font></td>
+                    
+                        <td>smtp</td>
+                    
+                        <td>server-status</td>
+                    
+                        <td>65000</td>
+                    
+                    <td><a href="http://smtp:65000/server-status">http://smtp:65000/server-status</a></td>
+                    <td><a href=""></a></td>
+                    <td>764086</td>
+                    <td>272</td>
+                    <td>20</td>
+					<td>10</td>
+					<td>text/html; charset=iso-8859-1</td>
+          <td>54.365112ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|403|server|server-status|80|http://server:80/server-status||764083|271|20|10|text/html; charset=iso-8859-1|
+                </div>
+                <tr class="result-403" style="background-color: #d2cb7e;">
+                    <td><font color="black" class="status-code">403</font></td>
+                    
+                        <td>server</td>
+                    
+                        <td>server-status</td>
+                    
+                        <td>80</td>
+                    
+                    <td><a href="http://server:80/server-status">http://server:80/server-status</a></td>
+                    <td><a href=""></a></td>
+                    <td>764083</td>
+                    <td>271</td>
+                    <td>20</td>
+					<td>10</td>
+					<td>text/html; charset=iso-8859-1</td>
+          <td>54.511048ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|403|apps|server-status|80|http://apps:80/server-status||764087|269|20|10|text/html; charset=iso-8859-1|
+                </div>
+                <tr class="result-403" style="background-color: #d2cb7e;">
+                    <td><font color="black" class="status-code">403</font></td>
+                    
+                        <td>apps</td>
+                    
+                        <td>server-status</td>
+                    
+                        <td>80</td>
+                    
+                    <td><a href="http://apps:80/server-status">http://apps:80/server-status</a></td>
+                    <td><a href=""></a></td>
+                    <td>764087</td>
+                    <td>269</td>
+                    <td>20</td>
+					<td>10</td>
+					<td>text/html; charset=iso-8859-1</td>
+          <td>54.545869ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|403|ssl|server-status|80|http://ssl:80/server-status||764081|268|20|10|text/html; charset=iso-8859-1|
+                </div>
+                <tr class="result-403" style="background-color: #d2cb7e;">
+                    <td><font color="black" class="status-code">403</font></td>
+                    
+                        <td>ssl</td>
+                    
+                        <td>server-status</td>
+                    
+                        <td>80</td>
+                    
+                    <td><a href="http://ssl:80/server-status">http://ssl:80/server-status</a></td>
+                    <td><a href=""></a></td>
+                    <td>764081</td>
+                    <td>268</td>
+                    <td>20</td>
+					<td>10</td>
+					<td>text/html; charset=iso-8859-1</td>
+          <td>55.092293ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|403|ssl|server-status|65000|http://ssl:65000/server-status||764082|271|20|10|text/html; charset=iso-8859-1|
+                </div>
+                <tr class="result-403" style="background-color: #d2cb7e;">
+                    <td><font color="black" class="status-code">403</font></td>
+                    
+                        <td>ssl</td>
+                    
+                        <td>server-status</td>
+                    
+                        <td>65000</td>
+                    
+                    <td><a href="http://ssl:65000/server-status">http://ssl:65000/server-status</a></td>
+                    <td><a href=""></a></td>
+                    <td>764082</td>
+                    <td>271</td>
+                    <td>20</td>
+					<td>10</td>
+					<td>text/html; charset=iso-8859-1</td>
+          <td>55.116044ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|403|server|server-status|65000|http://server:65000/server-status||764084|274|20|10|text/html; charset=iso-8859-1|
+                </div>
+                <tr class="result-403" style="background-color: #d2cb7e;">
+                    <td><font color="black" class="status-code">403</font></td>
+                    
+                        <td>server</td>
+                    
+                        <td>server-status</td>
+                    
+                        <td>65000</td>
+                    
+                    <td><a href="http://server:65000/server-status">http://server:65000/server-status</a></td>
+                    <td><a href=""></a></td>
+                    <td>764084</td>
+                    <td>274</td>
+                    <td>20</td>
+					<td>10</td>
+					<td>text/html; charset=iso-8859-1</td>
+          <td>54.964786ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|403|smtp|server-status|80|http://smtp:80/server-status||764085|269|20|10|text/html; charset=iso-8859-1|
+                </div>
+                <tr class="result-403" style="background-color: #d2cb7e;">
+                    <td><font color="black" class="status-code">403</font></td>
+                    
+                        <td>smtp</td>
+                    
+                        <td>server-status</td>
+                    
+                        <td>80</td>
+                    
+                    <td><a href="http://smtp:80/server-status">http://smtp:80/server-status</a></td>
+                    <td><a href=""></a></td>
+                    <td>764085</td>
+                    <td>269</td>
+                    <td>20</td>
+					<td>10</td>
+					<td>text/html; charset=iso-8859-1</td>
+          <td>55.238951ms</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|403|apps|server-status|65000|http://apps:65000/server-status||764088|272|20|10|text/html; charset=iso-8859-1|
+                </div>
+                <tr class="result-403" style="background-color: #d2cb7e;">
+                    <td><font color="black" class="status-code">403</font></td>
+                    
+                        <td>apps</td>
+                    
+                        <td>server-status</td>
+                    
+                        <td>65000</td>
+                    
+                    <td><a href="http://apps:65000/server-status">http://apps:65000/server-status</a></td>
+                    <td><a href=""></a></td>
+                    <td>764088</td>
+                    <td>272</td>
+                    <td>20</td>
+					<td>10</td>
+					<td>text/html; charset=iso-8859-1</td>
+          <td>55.117616ms</td>
+                    <td></td>
+                </tr>
+            
+        </tbody>
+      </table>
+
+        </div>
+        <br /><br />
+      </div>
+    </main>
+
+    
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#ffufreport').DataTable(
+            {
+                "aLengthMenu": [
+                    [250, 500, 1000, 2500, -1],
+                    [250, 500, 1000, 2500, "All"]
+                ]
+            }
+        )
+        $('select').formSelect();
+        });
+    </script>
+    <style>
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+
+      main {
+        flex: 1 0 auto;
+      }
+    </style>
+  </body>
+</html>
+
+	
